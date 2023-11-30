@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+        :root {
+            --primary-color: #a855f7;
+            --primary-color-dark: #9333ea;
+            --secondary-color: rgb(94, 8, 58);
+            --text-dark: #371f37;
+            --text-light: #886c89;
+            --extra-light: #ffffff;
+            --light-purple: #a855f7;
+            --dark-purple: #8b3366; 
+            --max-width: 1200px;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: var(--extra-light);
+        }
+
+        nav {
+            width: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+            background-color: var(--dark-purple);
+            z-index: 99;
+        }
+
+        .nav__content {
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 1.5rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            list-style: none;
+            transition: left 0.3s;
+        }
+
+        ul li a {
+            padding: 0.5rem 1rem;
+            border: 2px solid transparent;
+            text-decoration: none;
+            font-weight: 600;
+            color: white;
+            transition: 0.3s;
+        }
+
+        ul li a:hover {
+            color: rgb(0, 0, 0);
+        }
+
+        .section {
+            background-color: var(--extra-light);
+        }
+
+        .section__container {
+            min-height: 100vh;
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 10%;
+        }
+
+        .subtitle {
+            font-size: 30px;
+            letter-spacing: 2px;
+            color: var(--text-dark);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            margin-top: 15%;
+            margin-left: 35%;
+        }
+
+        .title {
+            font-size: 50px;
+            font-weight: 400;
+            line-height: 3rem;
+            color: var(--text-dark);
+            margin-top: 5%;
+        }
+
+        .title span {
+            font-weight: 600;
+        }
+
+        .description {
+            padding: 15px;
+            line-height: 1.5rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            margin-top: 15px;
+            font-size: 15px;
+        }
+
+        .socials {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2%;
+            margin-left: 35%;
+            margin-right: 35%;
+        }
+
+        .socials a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 2px solid var(--text-dark);
+            border-radius: 10%;
+            font-size: 20px;
+            color: var(--text-dark);
+            transition: color 0.5s, background-color 0.5s;
+            position: relative;
+            margin: 0 10px;
+        }
+
+        .socials a:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgb(255, 170, 255); 
+        }
+
+        .socials a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: var(--light-purple);
+            z-index: -1;
+            transition: width 0.5s;
+        }
+
+        .socials a:hover::before {
+            width: 100%;
+        }
+
+        .image {
+            display: grid;
+            place-items: center;
+        }
+
+        .image img {
+            margin-top: 10%;
+            width: 450px;
+            height: 480px;
+            border-radius: 50%;
+        }
+
+        @media (max-width: 750px) {
+            nav .checkbox {
+                display: block;
+            }
+
+            ul {
+                position: absolute;
+                width: 100%;
+                height: calc(100vh - 85px);
+                left: -100%;
+                top: 85px;
+                background-color: var(--extra-light);
+                flex-direction: column;
+                justify-content: center;
+                gap: 3rem;
+            }
+
+            nav #check:checked~ul {
+                left: 0;
+            }
+
+            ul li a {
+                font-size: 1.30rem;
+            }
+
+            .section__container {
+                padding: 10rem 1rem 5rem 1rem;
+                text-align: center;
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        .infographics {
+            text-align: center; 
+            margin: 3rem 0;
+        }
+
+        .infographics h3 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .infographics img {
+            width: 100%;
+            max-width: 500px; 
+            height: 800px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer {
+            text-align: center;
+            position: relative;
+            padding: 15px;
+            background-color: var(--dark-purple);
+            color: white;
+            margin-top: 10%;
+        }
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <nav>
+        <div class="nav__content">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">IT111 BLOG ENTRIES</a></li>
+                <li><a href="flex.html">FLEX PAGE</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="section">
+        <div class="section__container">
+            <div class="content">
+                <h1 class="title">
+                    IT 111<span><br> FINAL OUTPUT<br />PRESENTATION </span>
+                </h1>
+                <p class="subtitle">ABOUT ME</p>
+
+                <p class="description">
+                    Hello, I am Trisha Jeanne Pabillaran Alsola currently living at Balila, Lantapan, Bukidnon.
+                    I am 19 years old and studying at Bukidnon State University. My hobbies include eating, dancing,
+                    playing games, and exploring new things. Traveling to new places and learning more about HTML and CSS
+                    is my biggest interest for now. My hobbies and interests create a more enriching and personalized
+                    way to spend my time. Combining them engages me to align my passion, making my free time more
+                    enjoyable and meaningful.
+                </p>
+            </div>
+
+            <div class="image">
+                <img src="img/hoay.jpg" alt="profile" />
+            </div>
+
+        </div>
+
+        <div class="socials">
+            <a href="https://web.facebook.com/TrishaJeannePabillaranAlsola"><i
+                    class='bx bxl-facebook'></i></a>
+            <a href="https://www.instagram.com/trishaa_alsola/"><i class='bx bxl-instagram'></i></a>
+            <a href="https://twitter.com/trishaa_alsola"><i class='bx bxl-twitter'></i></a>
+        </div>
+
+    </section>
+
+    <div class="infographics">
+        <h3 style="color:#2b2b2b;">HOW DO I SEE MYSELF 8 YEARS FROM NOW</h3>
+        <img src="img/infograph.jpg" alt="infographic">
+    </div>
+
+    <div class="footer">
+        <p>TRISHA ALSOLA 2023</p>
+    </div>
+
+</body>
+
+</html>

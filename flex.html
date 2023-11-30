@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+        :root {
+            --primary-color: #a855f7;
+            --primary-color-dark: #9333ea;
+            --secondary-color: rgb(94, 8, 58);
+            --text-dark: #371f37;
+            --text-light: #886c89;
+            --extra-light: #ffffff;
+            --max-width: 1200px;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: rgba(205, 187, 198, 0.781);
+        }
+
+        nav {
+            width: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.57);
+            z-index: 99;
+        }
+
+        .nav__content {
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 1.5rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            list-style: none;
+            transition: left 0.3s;
+        }
+
+        ul li a {
+            padding: 0.5rem 1rem;
+            border: 2px solid transparent;
+            text-decoration: none;
+            font-weight: 600;
+            color:#371f37;
+            transition: 0.3s;
+        }
+
+        ul li a:hover {
+            color: #8b3366; 
+        }
+
+        .flex-entry {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px; /* Added margin for spacing between entries */
+        }
+
+        .flex-entry img {
+            width: 130%;
+            height: auto;
+            margin-bottom: 10px;
+            border: 2px solid rgb(184, 122, 158);
+            box-shadow: 0 0 10px rgba(94, 8, 58, 0.722);
+        }
+
+        .flex-entry h3 {
+            margin-top: 10px;
+            font-size: 50px;
+            color: rgb(94, 8, 58);
+        }
+
+        .flex-entry p {
+            margin-top: -10px;
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: rgb(94, 8, 58);
+            padding: 30px;
+        }
+
+        .footer {
+            text-align: center;
+            position: relative;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.57);
+            color: rgb(94, 8, 58);
+            margin-top: 10%;
+        }
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+
+  <body>
+    <nav>
+        <div class="nav__content">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">IT111 BLOG ENTRIES</a></li>
+                <li><a href="flex.html">FLEX PAGE</a></li>
+            </ul>            
+        </div>
+    </nav>
+
+    <div class="flex-entry">
+        <h3>MY FAMILY</h3>
+        <img src="img/family.jpg" alt="Family Image">
+        <p>my family always spending quality time together, creating strong connections, and building a sense of closeness.
+            Out kind of family Bonding strengthens our relationship, fosters understanding, and creates lasting memories.
+        </p>
+    </div>
+
+    <div class="flex-entry">
+        <h3>MY FRIENDS</h3>
+        <img src="img/friends.jpg" alt="Friends Image">
+        <p>Lucky to have a friend like this who always have my back. True friendship is a treasure! Spent the day with
+            the best friends make every moment memorable. Grateful for friends who bring so much joy into my life. You guys
+            are the real.
+        </p>
+    </div>
+
+    <div class="footer">
+        <p>TRISHA ALSOLA 2023</p>
+    </div>
+
+  </body>
+
+</html>

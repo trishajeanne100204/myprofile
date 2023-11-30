@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+        :root {
+            --primary-color: #a855f7;
+            --primary-color-dark: #9333ea;
+            --secondary-color: rgb(94, 8, 58);
+            --text-dark: #371f37;
+            --text-light: #886c89;
+            --extra-light: #ffffff;
+            --light-purple: #a855f7;
+            --dark-purple: rgba(139, 51, 102, 0.57);
+            --max-width: 1200px;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: var(--extra-light);
+        }
+
+        nav {
+            width: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+            background-color: var(--dark-purple);
+            z-index: 99;
+            transition: background-color 0.3s;
+        }
+
+        .nav__content {
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 1.5rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            list-style: none;
+            transition: left 0.3s;
+        }
+
+        ul li a {
+            padding: 0.5rem 1rem;
+            border: 2px solid transparent;
+            text-decoration: none;
+            font-weight: 600;
+            color: var(--text-dark);
+            transition: 0.3s;
+            position: relative;
+        }
+
+        ul li a:hover {
+            color: white;
+        }
+
+        .footer {
+            text-align: center;
+            position: relative;
+            padding: 15px;
+            background-color: var(--dark-purple);
+            color: white;
+            margin-top: 10%;
+        }
+
+        .blog-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .blog-entry {
+            width: 45%;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .blog-entry img {
+            width: 100%;
+            height: auto;
+            border: 2px solid var(--text-light);
+            box-shadow: 0 0 10px rgba(94, 8, 58, 0.973);
+        }
+
+        .blog-entry h3 {
+            font-size: 30px;
+            color: var(--secondary-color);
+        }
+
+        .blog-entry p {
+            color: var(--text-dark);
+        }
+
+        .last {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            margin: 5%;
+        }
+    </style>
+  </head>
+
+  <body>
+
+    <nav>
+        <div class="nav__content">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">IT111 BLOG ENTRIES</a></li>
+                    <li><a href="flex.html">FLEX PAGE</a></li>
+                </ul>                
+        </div>
+    </nav>
+
+    <div class="blog-container">
+
+        <div class="blog-entry">
+            <h3>LESSON 1</h3>
+            <img src="img/chapter 1.jpg" alt="Lesson 1 Image">
+            <p> Introduction to Computing typically covers fundamental concepts in computer science and information technology.
+                Us students learn about the basics of computer systems. This lesson may also introduce key topics like
+                computer hardware, software, networking, and the impact of computing on society.
+                Students often gain foundational skills in problem-solving and logical thinking,
+                setting the groundwork for more advanced studies in computing.</p>
+        </div>
+
+        <div class="blog-entry">
+            <h3>LESSON 2</h3>
+            <img src="img/chapter 2.jpg" alt="Lesson 2 Image">
+            <p> In this field, you explore how computers work, solve problems and create exciting apps. You can become a
+                programmer,
+                designing and building software or a system analyst, understanding and improving computer systems.
+                .</p>
+        </div>
+
+        <div class="blog-entry">
+            <h3>LESSON 3 </h3>
+            <img src="img/chapter 3.jpg" alt="Lesson 3 Image">
+            <p>The information processing cycle is a series of steps that computer follow to process the data.
+                It consist of for making stages including the Input, Processing, Output and Storage.</p>
+        </div>
+
+        <div class="blog-entry">
+            <h3>LESSON 4</h3>
+            <img src="img/chapter 4.jpg" alt="Lesson 4 Image">
+            <p>Computer System is a complex and powerful arrangement of hardware and software designed to process and
+                manage information.
+                But Computer system has 4 components which is the hardware, software, peopleware and dataware.</p>
+        </div>
+
+        <div class="blog-entry">
+            <h3>LESSON 5</h3>
+            <img src="img/chapter 5.jpg" alt="Lesson 4 Image">
+            <p>The basic concept of computer security which computer security is a crucial aspect of ensuring the integrity
+                and availability of information in digital
+                environment. It involves safeguarding computer systems and data from unauthorized access, damage or
+                disruption</p>
+        </div>
+
+    </div>
+
+    <div class="last">
+        <h3>HTML AND CSS</h3>
+        <img src="img/chapter 6.jpg" alt="SS1 & SS2 Image">
+        <p>HTML and CSS is the one who perceived as challenging for me because they serve as the backbone
+            for creating and styling web pages. Html is the markup language used to structure the content on a webpage,
+            defining elements like
+            headings, paragraph and images. Css is responsible for the presentation and layout, determining how HTML
+            element are displayed on the
+            screen. Despite the challenges, they provide the essential skills to create aesthetically pleasing and
+            well-structures websites,
+            forming the foundation for further web development and design knowledge. Practice, exploring and patience
+            are key to overcome the
+            initial hurdles and becoming proficient in these fundamental web technologies.</p>
+    </div>
+
+    <div class="footer">
+        <p>TRISHA ALSOLA 2023</p>
+    </div>
+
+  </body>
+
+</html>
